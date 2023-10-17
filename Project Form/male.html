@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Male</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body{
+            /*display: flex;
+            justify-content: center;
+            align-items: center;*/
+        }
+        
+        body .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-height: 100vh;
+        }
+        table, tr, th, td{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        .container{
+            border: 2px solid black;
+            height: auto;
+        }
+
+        table{
+            width: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <th colspan="2">Welcome!</th>
+            </tr>
+            <tr>
+                <td>Name : </td>
+                <td><script> document.write(localStorage.getItem('first-name') + ' ' + localStorage.getItem('last-name'));</script> </td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

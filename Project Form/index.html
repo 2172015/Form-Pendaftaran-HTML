@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- Dave Andrew 2172015 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="navigation">
+        <a href="#">Home</a> 
+        <a href="#"> Contact</a>
+        <a href="#"> Register</a>
+    </div>
+    <div class="container">
+        <div class="title"><h2>Registration</h2></div>
+        <form id="form" action="#">
+            <div class="input-box">
+                <span class="text">Name</span>
+                <i class='bx bx-user' id="user"></i><br>
+                <input type="text" placeholder="First Name" class="text-input" id="fname" required>
+                <input type="text" placeholder="Last Name" class="text-input" id="lname"><br>
+                <span class="text">Gender</span>
+                <i class='bx bx-male-female' id="gender"></i><br>
+                <input type="radio" name="gender" value="male" checked="checked" id="male">
+                <label for="male"> Male </label>
+                <i class='bx bx-male-sign' id="male"></i>
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female"> Female </label>
+                <i class='bx bx-female-sign' id="female"></i><br>
+                <span class="text">Age</span><br>
+                <input type="number" class="text-input" id="age" required><br>
+                <span class="text">Birth Date</span>
+                <i class='bx bx-calendar' id="calendar"></i><br>
+                <input type="date" name="birth" id="birth"><br>
+                <span class="text">Address</span>
+                <i class='bx bx-home' id="bx-home"></i><br>
+                <input type="text" class="text-input" id="address" required><br>
+                <span class="text">Select a photo</span>
+                <input type="file" name="foto" class="photo"><br>
+                <input type="submit" value="submit" class="submit">
+                <input type="reset" value="reset" class="submit">
+            </div>    
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('form');
+        const gender = document.getElementById('gender');
+        const male = document.getElementById('male');
+        const female = document.getElementById('female');
+        const fname = document.getElementById('fname');
+        const lname = document.getElementById('lname');
+        const age = document.getElementById('age');
+        const birth = document.getElementById('birth');
+        const address = document.getElementById('address');
+
+
+
+        form.addEventListener('submit', function(e, male, female){
+            e.preventDefault
+            
+            const fnamevalue = fname.value;
+            const lnamevalue = lname.value;
+            
+            localStorage.setItem('first-name', fnamevalue);
+            localStorage.setItem('last-name',lnamevalue);
+            
+            console.log(male.checked); 
+            if (male.checked != true){
+                form.action = "#";
+            } else {
+                form.action = "male.html";
+            }
+
+        })
+
+
+
+    </script>
+</body>
+</html>

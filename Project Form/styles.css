@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    font-family: 'Poppins', sans-serif;
+    /*margin: 0;
+    padding: 0;*/
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    /*display: flex;*/
+    background-image: url("images/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2300px;
+    /*justify-content: center;
+    min-height: 100vh;
+    align-items: center;*/
+}
+
+.container{
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.container .title h2{
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+}
+
+.container .title h2::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    left:0;
+    bottom: 0;
+    background-color: #4d39fa;
+
+}
+
+.container form .input-box{
+    padding: 15px 0;
+}
+
+input{
+    margin: 2px 0;
+}
+
+.text{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.text-input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+}
+
+.text-input::placeholder{
+    padding-left: 5px;
+    color: rgba(255, 255, 255, .2);
+}
+
+.input-box .submit{
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 4px 4px;
+    float: right;
+}
+
+.input-box .submit:hover{
+    background-color: white;
+    color: black;    
+}
+
+.navigation{
+    justify-content: left;
+    align-items: initial;
+    min-height: 0px;
+}
+
+.navigation a{
+    text-decoration: none;
+    margin: 15px;
+}
+
+.photo::-webkit-file-upload-button{
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    color:rgba(255, 255, 255, 0.6);
+    margin-top: 10px;
+}
+
+i{
+    font-size: 25px;
+}
+
+#birth{
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .3);
+}
+
+#birth::-webkit-calendar-picker-indicator {
+    display:none;
+}
